@@ -10,70 +10,218 @@
 
 <style>
 
-body {
-    font-family: Arial, sans-serif;
-    max-width: 1000px;
-    margin: auto;
-    padding: 40px;
-    background: #f8fafc;
-    color: #1e293b;
+* {
+    box-sizing: border-box;
 }
 
-h1 {
-    font-size: 52px;
-    text-align: center;
+
+body {
+
+    margin:0;
+    font-family: Inter, Arial, sans-serif;
+    background:#f8fafc;
+    color:#1e293b;
+
 }
+
+
+nav {
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 60px;
+    background:white;
+    border-bottom:1px solid #e2e8f0;
+
+}
+
+
+.logo {
+
+    font-size:24px;
+    font-weight:bold;
+
+}
+
+
+nav a {
+
+    margin-left:25px;
+    text-decoration:none;
+    color:#475569;
+
+}
+
+
+
+.container {
+
+    max-width:1100px;
+    margin:auto;
+    padding:40px 25px;
+
+}
+
+
 
 .hero {
-    text-align: center;
-    padding: 40px;
-}
 
-.subtitle {
-    font-size: 22px;
-    color: #475569;
+    text-align:center;
+    padding:80px 20px;
+
 }
 
 
-h2 {
-    margin-top: 45px;
+.hero h1 {
+
+    font-size:60px;
+    margin-bottom:20px;
+
 }
 
 
-.card-container {
-    display: flex;
-    gap: 20px;
-    flex-wrap: wrap;
+
+.hero p {
+
+    font-size:22px;
+    color:#64748b;
+    max-width:700px;
+    margin:auto;
+
 }
+
+
+
+.buttons {
+
+    margin-top:35px;
+
+}
+
+
+.btn {
+
+    display:inline-block;
+    padding:15px 30px;
+    border-radius:10px;
+    text-decoration:none;
+    margin:10px;
+
+}
+
+
+.primary {
+
+    background:#2563eb;
+    color:white;
+
+}
+
+
+
+.secondary {
+
+    background:white;
+    border:1px solid #cbd5e1;
+    color:#1e293b;
+
+}
+
+
+
+.section {
+
+    margin-top:70px;
+
+}
+
+
+
+.section h2 {
+
+    text-align:center;
+    font-size:36px;
+
+}
+
+
+
+.cards {
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+    gap:25px;
+    margin-top:35px;
+
+}
+
 
 
 .card {
 
-background: white;
-padding: 20px;
-border-radius: 12px;
-width: 250px;
-box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
 
 }
 
 
-.button {
 
-display:inline-block;
-padding:12px 25px;
-background:#2563eb;
-color:white;
-text-decoration:none;
-border-radius:8px;
-margin-top:20px;
+.card h3 {
+
+    font-size:22px;
 
 }
 
 
-a {
-    color:#2563eb;
+
+.about {
+
+    background:white;
+    padding:40px;
+    border-radius:15px;
+
 }
+
+
+
+.contact {
+
+    text-align:center;
+    padding:40px;
+
+}
+
+
+
+footer {
+
+    text-align:center;
+    padding:30px;
+    color:#64748b;
+
+}
+
+
+
+@media(max-width:700px){
+
+nav {
+
+padding:20px;
+
+}
+
+.hero h1 {
+
+font-size:42px;
+
+}
+
+}
+
 
 
 </style>
@@ -84,27 +232,85 @@ a {
 <body>
 
 
-<div class="hero">
+<nav>
+
+<div class="logo">
+AI Agent Platform
+</div>
+
+
+<div>
+
+<a href="#features">
+Features
+</a>
+
+
+<a href="docs.html">
+Docs
+</a>
+
+
+<a href="#contact">
+Contact
+</a>
+
+</div>
+
+</nav>
+
+
+
+<div class="container">
+
+
+<section class="hero">
+
 
 <h1>
-AI Agent Platform
+Build AI Applications Faster
 </h1>
 
 
-<p class="subtitle">
+<p>
+
 An open-source AI developer platform
-for building applications using LLM APIs.
+for building applications using LLM APIs,
+automation workflows, and intelligent tools.
+
 </p>
 
 
-<a class="button" href="https://github.com/syncfpssocials-jpg/ai-agent-platform">
-View GitHub Repository
+
+<div class="buttons">
+
+
+<a class="btn primary"
+href="https://github.com/syncfpssocials-jpg/ai-agent-platform">
+
+View GitHub
+
+</a>
+
+
+<a class="btn secondary"
+href="docs.html">
+
+Documentation
+
 </a>
 
 
 </div>
 
 
+</section>
+
+
+
+
+
+<section class="section" id="features">
 
 
 <h2>
@@ -112,7 +318,8 @@ Features
 </h2>
 
 
-<div class="card-container">
+
+<div class="cards">
 
 
 <div class="card">
@@ -122,23 +329,11 @@ AI Workflows
 </h3>
 
 <p>
-Build automated AI-powered processes.
+Create automated workflows powered by AI models.
 </p>
 
 </div>
 
-
-<div class="card">
-
-<h3>
-Developer Automation
-</h3>
-
-<p>
-Improve developer productivity with AI tools.
-</p>
-
-</div>
 
 
 <div class="card">
@@ -148,7 +343,37 @@ LLM Integrations
 </h3>
 
 <p>
-Connect applications with language models.
+Connect applications with large language models.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Developer Automation
+</h3>
+
+<p>
+Improve productivity with AI-powered developer tools.
+</p>
+
+</div>
+
+
+
+
+<div class="card">
+
+<h3>
+Open Source
+</h3>
+
+<p>
+Public developer project built for collaboration.
 </p>
 
 </div>
@@ -157,6 +382,43 @@ Connect applications with language models.
 </div>
 
 
+</section>
+
+
+
+
+
+<section class="section">
+
+
+<h2>
+About
+</h2>
+
+
+<div class="about">
+
+
+<p>
+
+AI Agent Platform is an open-source project
+focused on helping developers create
+AI-powered applications using modern
+language model technologies.
+
+</p>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="section">
 
 
 <h2>
@@ -164,13 +426,31 @@ Documentation
 </h2>
 
 
+<div class="about">
+
 <p>
-<a href="docs.html">
-Read Documentation →
-</a>
+
+Learn how to install, configure,
+and use the platform.
+
 </p>
 
 
+<a href="docs.html">
+Read Documentation →
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+<section class="contact" id="contact">
 
 
 <h2>
@@ -181,6 +461,31 @@ Contact
 <p>
 aiagentplatform@proton.me
 </p>
+
+
+<p>
+
+GitHub:
+<a href="https://github.com/syncfpssocials-jpg/ai-agent-platform">
+github.com/syncfpssocials-jpg/ai-agent-platform
+</a>
+
+</p>
+
+
+</section>
+
+
+
+</div>
+
+
+
+<footer>
+
+Open-source AI Developer Platform
+
+</footer>
 
 
 
