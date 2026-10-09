@@ -30,3 +30,7 @@ Follow the documentation to configure and run the project.
 ## License
 
 MIT License
+
+## Demo
+
+![AI Agent Platform Screenshot](screenshots/screenshot.png)
